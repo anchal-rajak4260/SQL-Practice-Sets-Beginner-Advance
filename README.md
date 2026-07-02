@@ -158,7 +158,7 @@ WHERE (CITY NOT LIKE 'A%'
 
  ```
 ---- 
-Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+Query the Name of any student in STUDENTS who scored higher than 75 Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
 
 Input Format
 
@@ -183,8 +183,92 @@ DISTINCT is not needed here because student names are unique per ID, but if dupl
 
 ----
 
+Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+Input Format
+
+The Employee table containing employee data for a company is described as follows:
+
+```SQL
+SELECT name
+FROM Employee
+ORDER BY name;
+```
+
+----
+Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than $ 2000  per month who have been employees for less than 10 months. Sort your result by ascending employee_id.
+
+Input Format
+
+The Employee table containing employee data for a company is described as follows:
+
+```sql
+SELECT name
+FROM Employee
+WHERE salary > 2000
+  AND months < 10
+ORDER BY employee_id;
+```
+
+---
+
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+Write a query to print the pattern P(20).
+
+```sql
+WITH RECURSIVE pattern(n) AS (
+    SELECT 20
+    UNION ALL
+    SELECT n - 1
+    FROM pattern
+    WHERE n > 1
+)
+SELECT REPEAT('* ', n)
+FROM pattern;
+
+```
+How it works:
+WITH RECURSIVE pattern(n) → creates a sequence starting at 20 and counting down to 1.
+
+SELECT 20 → initializes the recursion.
+
+UNION ALL SELECT n - 1 ... → decrements until it reaches 1.
+
+REPEAT('* ', n) → prints n stars separated by spaces for each row.
 
 
+---------
+
+
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+Write a query to print the pattern P(20).
+
+```sql
+
+WITH RECURSIVE pattern(n) AS (
+    SELECT 1
+    UNION ALL
+    SELECT n + 1
+    FROM pattern
+    WHERE n < 20
+)
+SELECT REPEAT('* ', n)
+FROM pattern;
+```
+
+---
 
 
 
