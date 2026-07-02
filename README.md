@@ -6,11 +6,25 @@ Input Format
 
 The STATION table is described as follows:
 
-             STATION 
-     Fied | Type
-     ID   | NUMBER
-     CITY | VARCHAR2(21)
-    STATE | VARCHAR2(2)
-    LAT_N |NUMBER
-    LONG_W | NUMBER
+  | STATION |
+  |---------------|
+  | Fied | Type |
+  | ID   | NUMBER |
+  | CITY | VARCHAR2(21) |
+  | STATE | VARCHAR2(2) |
+  | LAT_N |NUMBER |
+  | LONG_W | NUMBER |
+
+  ```sql
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY LIKE 'A%'
+   OR CITY LIKE 'E%'
+   OR CITY LIKE 'I%'
+   OR CITY LIKE 'O%'
+   OR CITY LIKE 'U%';
+
+  ```
+
+  
 
