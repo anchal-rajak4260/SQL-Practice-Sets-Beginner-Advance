@@ -67,6 +67,8 @@ WHERE (CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR C
 
 ```
 
+---
+
 Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
 
 Input Format
@@ -85,6 +87,50 @@ WHERE CITY NOT LIKE 'A%'
 
 ```
 
+---
+
+Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+```SQL
+ SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT LIKE '%a'
+  AND CITY NOT LIKE '%e'
+  AND CITY NOT LIKE '%i'
+  AND CITY NOT LIKE '%o'
+  AND CITY NOT LIKE '%u';
+
+```
+
+---
+
+Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+```SQL
+SELECT DISTINCT CITY
+FROM STATION
+WHERE (CITY NOT LIKE 'A%' 
+   AND CITY NOT LIKE 'E%' 
+   AND CITY NOT LIKE 'I%' 
+   AND CITY NOT LIKE 'O%' 
+   AND CITY NOT LIKE 'U%')
+
+   OR
+
+      (CITY NOT LIKE '%a' 
+   AND CITY NOT LIKE '%e' 
+   AND CITY NOT LIKE '%i' 
+   AND CITY NOT LIKE '%o' 
+   AND CITY NOT LIKE '%u');
+```
 
   
 
