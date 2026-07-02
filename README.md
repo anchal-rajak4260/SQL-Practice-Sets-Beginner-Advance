@@ -7,8 +7,9 @@ Input Format
 The STATION table is described as follows:
 
 
-| STATION | TABLE |        
-| ------------------------ |
+| STATION | TABLE |
+|-------------------------|
+
   | Fied | Type |
   | ID  | NUMBER |
   | CITY | VARCHAR2(21) |
