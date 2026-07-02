@@ -6,10 +6,10 @@ Input Format
 
 The STATION table is described as follows:
 
-  | STATION |
+     STATION               
   |---------------|
   | Fied | Type |
-  | ID   | NUMBER |
+  | ID  | NUMBER |
   | CITY | VARCHAR2(21) |
   | STATE | VARCHAR2(2) |
   | LAT_N |NUMBER |
