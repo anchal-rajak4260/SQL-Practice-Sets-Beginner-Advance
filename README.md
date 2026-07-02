@@ -67,6 +67,23 @@ WHERE (CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR C
 
 ```
 
+Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+```SQL
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT LIKE 'A%'
+  AND CITY NOT LIKE 'E%'
+  AND CITY NOT LIKE 'I%'
+  AND CITY NOT LIKE 'O%'
+  AND CITY NOT LIKE 'U%';
+
+```
 
 
   
