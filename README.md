@@ -267,6 +267,12 @@ WITH RECURSIVE pattern(n) AS (
 SELECT REPEAT('* ', n)
 FROM pattern;
 ```
+* 
+* * 
+* * * 
+* * * * 
+...
+* * * * ... (20 stars)
 
 ---
 
